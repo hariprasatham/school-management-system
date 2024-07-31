@@ -1,15 +1,18 @@
-import { useState } from 'react'
-import './App.css'
-import { Button } from '@/components/ui/button'
+import { RouterProvider } from "react-router-dom";
+import "./App.css";
+import { ThemeProvider } from "./components/ThemeProvider";
+import router from "./router";
+import  Toaster from "./components/ui/toaster";
 
-function App() {
-
+function App({children}) {
   return (
     <div>
-      <h1 className='text-green-600 dark:text-red-600 text-4xl ' >some txt</h1>
-      <Button>Hello</Button>
-</div>
-  )
+      <ThemeProvider defaultTheme='dark' storageKey='vite-ui-theme'>
+        <RouterProvider router={router} />
+        <Toaster />
+      </ThemeProvider>
+    </div>
+  );
 }
 
-export default App
+export default App;
