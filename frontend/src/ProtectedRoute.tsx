@@ -1,4 +1,5 @@
 import { Navigate, Outlet } from 'react-router-dom';
+import Layout from '@/components/layout/Layout';
 
 const ProtectedRoute = ({ isAuthenticated }: { isAuthenticated: () => boolean }) => {
   if (
@@ -8,7 +9,7 @@ const ProtectedRoute = ({ isAuthenticated }: { isAuthenticated: () => boolean })
     return <Navigate to="/" replace />;
   }
 
-  return <Outlet />;
+  return <Layout />;
 };
 
 export default ProtectedRoute;
