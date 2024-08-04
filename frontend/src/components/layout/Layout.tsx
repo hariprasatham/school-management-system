@@ -6,7 +6,7 @@ const Layout = () => {
   return (
     <div className='relative h-full overflow-hidden bg-background'>
         <Sidebar />
-        <main>
+        <main className='ps-80'>
             <Outlet />
         </main>
     </div>

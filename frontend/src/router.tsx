@@ -61,7 +61,7 @@ import Transport from "./pages/transport/Transport";
                 element: <Attendance />,
             },
             {
-                path: '/class',
+                path: '/classes',
                 element: <Class />,
             },
             {

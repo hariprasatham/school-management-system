@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Sidebar = () => {
   return (
-    <aside className=" fixed top-0 left-0 w-80 h-full overflow-y-auto bg-background border">
+    <aside className=" fixed top-0 left-0 w-72 h-full overflow-y-auto bg-background border">
       <div>
         <h2 className="text-center mt-5">ClassFusion</h2>
         <nav className="grid gap-1 mt-5 px-2 ">
