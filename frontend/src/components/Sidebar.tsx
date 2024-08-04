@@ -1,4 +1,4 @@
-import { sidelinks, SideLink } from "@/data/sidelinks";
+import { sidelinks } from "@/data/sidelinks";
 import { Link } from "react-router-dom";
 
 const Sidebar = () => {

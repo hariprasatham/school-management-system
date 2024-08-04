@@ -1,9 +1,9 @@
-import React from 'react'
 
-const department = () => {
+
+const Department = () => {
   return (
     <div>department</div>
   )
 }
 
-export default department
+export default Department

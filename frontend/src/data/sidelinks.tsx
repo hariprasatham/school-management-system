@@ -1,4 +1,4 @@
-import { LayoutDashboard, User, Users, Grid, Book, Calendar, CheckSquare, Clipboard, CalendarRange, BookOpen, Truck, Home as HomeIcon, Box, DollarSign, FileText, Settings, LogOut   } from "lucide-react"
+import { LayoutDashboard, User, Users, Grid, Book, Calendar, CheckSquare, Clipboard, CalendarRange, BookOpen, Truck, Home as HomeIcon, Box, DollarSign, FileText, Settings  } from "lucide-react"
 
 export interface NavLink {
     title: string,
