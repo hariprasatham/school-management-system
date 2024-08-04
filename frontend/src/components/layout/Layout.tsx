@@ -4,7 +4,7 @@ import Sidebar from '@/components/Sidebar'
 
 const Layout = () => {
   return (
-    <div className=''>
+    <div className='relative h-full overflow-hidden bg-background'>
         <Sidebar />
         <main>
             <Outlet />
