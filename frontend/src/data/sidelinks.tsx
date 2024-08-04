@@ -33,11 +33,6 @@ export const sidelinks: SideLink[] = [
         icon: <Grid />
     },
     {
-        title: "Dashboard",
-        href: "/",
-        icon: <LayoutDashboard />
-    },
-    {
         title: "Courses",
         href: "/courses",
         icon: <Book />
