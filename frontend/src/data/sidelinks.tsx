@@ -97,10 +97,10 @@ export const sidelinks: SideLink[] = [
         href: "/settings",
         icon: <Settings />
     },
-    {
-        title: "Logout",
-        href: "/",
-        icon: <LogOut />
-    },
+    // {
+    //     title: "Logout",
+    //     href: "/",
+    //     icon: <LogOut />
+    // },
 
 ]
