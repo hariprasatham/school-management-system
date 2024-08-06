@@ -7,5 +7,4 @@ const DepartmentSchema = mongoose.Schema({
     }
 })
 
-
-export default mongoose.model("Department", DepartmentSchema)
+ module.exports = mongoose.model("Department", DepartmentSchema)

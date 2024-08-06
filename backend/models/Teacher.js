@@ -27,10 +27,10 @@ const TeacherSchema = mongoose.Schema({
         type: String,
     },
     "department_id": {
-        type: string,
-        ref: department
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Department"
     },
 })
 
 
-export default mongoose.model("Teacher", TeacherSchema)
+module.export= mongoose.model("Teacher", TeacherSchema)
