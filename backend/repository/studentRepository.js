@@ -1,6 +1,12 @@
 const Student = require("../models/Student")
 
-const create = async(data)=>{return await Student.create(data)}
+const create = async(data)=>{
+    // Check if a student with the same email already exists
+    const existingStudent = await Student.findOne({ email: data.email });
+    if (existingStudent) {
+        throw new Error("A student with this email already exists.");
+    }
+    return await Student.create(data)}
 
 const getAll = async()=>{return await Student.find({})}
 

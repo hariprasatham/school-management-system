@@ -1,7 +1,9 @@
 const { create, getAll, getById, updateById, deleteById} = require("../repository/studentRepository")
-
+const moment = require("moment")
 class StudentService{
     async createStudent( data ){
+        data.dob = moment(data.dob)
+        data.dob = moment(data.dob)
         return await create(data);
     }
     async getAllStudents( data ){
