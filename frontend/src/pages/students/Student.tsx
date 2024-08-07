@@ -154,22 +154,22 @@ export const payments: Payment[] = [
 const student = () => {
   return (
     <div className="pr-8">
-      <div>
-      <h1>STUDENTS...</h1>
+      <div className="pt-20 pb-5 flex items-center justify-between">
+      <h1 className="text-3xl " >STUDENTS . . .</h1>
       <Button>
           <UserPlus />
           Add-student
       </Button>
       </div>
-      <div>
-        <Input />
-        <Button>
+      <div className="inline-flex pb-5">
+        <Input className="w-80 me-10 " placeholder="Filter Students ..." />
+        <Button variant="outline" className="">
           <CirclePlus />
-          status
+          <span className="ms-2">status</span>
         </Button>
-        <Button>
+        <Button variant="outline" className="me-10"> 
           <CirclePlus />
-          priority
+          <span className="ms-2">priority</span>
         </Button>
       </div>
       <div>
