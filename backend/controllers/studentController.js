@@ -3,12 +3,8 @@ const studentService = require("../services/studentService")
 class StudentController{
    
     async createStudent (req, res, next){
-        const data = req.body
-        data.dob = new Date(req.body.dob);
-        console.log(data)
-        data.admission_date = new Date(req.body.admission_date);
         try {
-            const response = await studentService.createStudent(data)
+            const response = await studentService.createStudent(req.body)
             res.status(200).json(response)
         } catch (error) {
             next(error)
