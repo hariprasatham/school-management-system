@@ -14,77 +14,121 @@ import {
 } from "@/components/ui/dropdown-menu"
 // This type is used to define the shape of our data.
 // You can use a Zod schema here if you want.
-export type Payment = {
-  id: string;
-  amount: number;
-  status: "pending" | "processing" | "success" | "failed";
-  email: string;
+export type Student = {
+  id:string;
+  first_name:string;
+  last_name:string;
+  dob:string;
+  gender:string;
+  address:string;
+  email:string;
+  phone_number:string;
+  admission_date:string;
+  class_id:string
 };
 
-// export const columns: ColumnDef<Payment>[] = [
-
-// {
-//     accessorKey: 'id',
-//     header:"id"
-// },
-//   {
-//     accessorKey: "status",
-//     header: "Status",
-//   },
-//   {
-//     accessorKey: "email",
-//     header: "Email",
-//   },
-//   {
-//     accessorKey: "amount",
-//     header: "Amount",
-//   },
-// ]
-
-export const columns: ColumnDef<Payment>[] = [
+export const columns: ColumnDef<Student>[] = [
 
   {
-    accessorKey: "status",
-    header: "Status",
+    accessorKey: "id",
+    header: "id",
     cell: ({ row }) => {
       return (
-        <div className="w-32" >{row.getValue("status")}</div>
+        <div className="w-10" >{row.getValue("id")}</div>
       )
     }
   },
   {
-    accessorKey: "email",
+    accessorKey: "first_name",
     header: ({ column }) => {
       return (
         <Button
           variant="ghost"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
-          Email
+          First Name
           <ArrowUpDown className="ml-2 h-4 w-4" />
         </Button>
       )
     },
     cell: ({row})=>{
       return(
-        <div className="w-32">{row.getValue("email")}</div>
+        <div className="w-20">{row.getValue("first_name")}</div>
       )
     }
   },
   {
-    accessorKey: "amount",
-    header: () => <div className="text-left">Amount</div>,
+    accessorKey: "last_name",
+    header: () => <div className="text-left">Last Name</div>,
     cell: ({ row }) => {
-      const amount = parseFloat(row.getValue("amount"));
-      const formatted = new Intl.NumberFormat("en-US", {
-        style: "currency",
-        currency: "USD",
-      }).format(amount);
       return (
-      <div className="w-32 text-left font-medium">{formatted}</div>
+        <div className="w-32">{row.getValue("last_name")}</div>
       )
 
     },
+  },
+  {
+    accessorKey: "email",
+    header: "email",
+    cell: ({ row }) => {
+      return (
+        <div className="w-32" >{row.getValue("email")}</div>
+      )
+    }
+  },
+  {
+    accessorKey: "phone_number",
+    header: "phone_number",
+    cell: ({ row }) => {
+      return (
+        <div className="w-32" >{row.getValue("phone_number")}</div>
+      )
+    }
+  },
+  {
+    accessorKey: "admission_date",
+    header: "admission_date",
+    cell: ({ row }) => {
+      return (
+        <div className="w-32" >{row.getValue("admission_date")}</div>
+      )
+    }
+  },
+  {
+    accessorKey: "class_id",
+    header: "class_id",
+    cell: ({ row }) => {
+      return (
+        <div className="w-32" >{row.getValue("class_id")}</div>
+      )
+    }
+  },
+  {
+    accessorKey: "dob",
+    header: "dob",
+    cell: ({ row }) => {
+      return (
+        <div className="w-32" >{row.getValue("dob")}</div>
+      )
+    }
+  },
+  {
+    accessorKey: "gender",
+    header: "gender",
+    cell: ({ row }) => {
+      return (
+        <div className="w-32" >{row.getValue("gender")}</div>
+      )
+    }
+  },
+  {
+    accessorKey: "address",
+    header: "address",
+    cell: ({ row }) => {
+      return (
+        <div className="w-32" >{row.getValue("address")}</div>
+      )
+    }
   },
   {
     id: "actions",
